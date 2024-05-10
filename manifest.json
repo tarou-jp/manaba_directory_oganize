@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "myDownloader",
+  "version": "0.0.1",
+  "permissions": ["downloads"], 
+  "background": {
+    "matches": ["https://manaba.tsukuba.ac.jp/*"], 
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://manaba.tsukuba.ac.jp/*"], 
+      "js": ["main.js"]
+    }
+  ]
+}
